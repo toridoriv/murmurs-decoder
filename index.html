@@ -4,13 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Murmurs Decoder</title>
+  <link href="https://fonts.googleapis.com/css?family=Amaranth:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+  <nav class="navbar">
+    <a class="navbar-brand" href="#">Murmurs Decoder</a>
+  </nav>
+  <div class="container" id="main-container">
+    <div class="row">
+      <div class="col-sm"></div>
+      <div class="col-sm">
+        <h2>Instructions</h2>
+        <ol id="instructions">
+          <li>Paste the sentence from the notes or notices Kaia has given to you on the input below.</li>
+          <li>Click on the submit button.</li>
+          <li>Repeat the proccess for all the sentences you want to decode.</li>
+          <li>Click on the "Generate Image" button to, duh, generate an image with your code :3</li>
+        </ol>
+      </div>
+      <div class="col-sm"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm"></div>
+      <div class="col-sm">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="input-quote" aria-describedby="input-quote" placeholder="Paste quote here">
+          </div>
+          <button type="submit" class="btn btn-primary" id="btn-submit">Submit</button>
+        </form>
+      </div>
+      <div class="col-sm"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm"></div>
+      <div class="col-sm" id="results">
+        <div id="content-results">
+        </div>
+        <div id="button-container">
+          <button class="btn btn-primary btn-coder" id="btn-to-img">Generate Image</button>
+          <button class="btn btn-primary btn-coder" id="btn-clean">Clean</button>
+        </div>
+        <div id="image-display"></div>
+      </div>
+      <div class="col-sm"></div>
+    </div>
+  </div>
   <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/FileSaver.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="assets/js/html2canvas.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/functions.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
