@@ -14,32 +14,46 @@
     <a class="navbar-brand" href="#">Murmurs Decoder</a>
   </nav>
   <div class="container" id="main-container">
-    <div class="row">
+    <div class="row" id="container-instructions">
       <div class="col-sm"></div>
       <div class="col-sm">
         <h2>Instructions</h2>
-        <ol id="instructions">
+        <ol class="instructions" id="instructions-step1">
           <li>Paste the sentence from the notes or notices Kaia has given to you on the input below.</li>
           <li>Click on the submit button.</li>
           <li>Repeat the proccess for all the sentences you want to decode.</li>
           <li>Click on the "Generate Image" button to, duh, generate an image with your code :3</li>
+          <li>Save the image and click on the large button to go to the second step.</li>
+        </ol>
+        <ol class="instructions" id="instructions-step2">
+          <li>Now, you have to paste the characters from the <a href="http://www.neopets.com/twr/visions.phtml">Mystic Murmurs</a> in the input below.</li>
+          <li>Paste the first 3 numbers you receive previously, separated by a comma.</li>
+          <li>Click on the submit button.</li>
+          <li>And then this will tell you where you have to go now. But remember! You still need to click on the characters on Kaia's Vision or the plot will not move forward.</li>
         </ol>
       </div>
       <div class="col-sm"></div>
     </div>
-    <div class="row">
+    <div class="row" id="container-form">
       <div class="col-sm"></div>
       <div class="col-sm">
-        <form>
+        <form id="form-step1">
           <div class="form-group">
             <input type="text" class="form-control" id="input-quote" aria-describedby="input-quote" placeholder="Paste quote here">
           </div>
           <button type="submit" class="btn btn-primary" id="btn-submit">Submit</button>
         </form>
+        <form id="form-step2">
+          <div class="form-group">
+            <input type="text" class="form-control" id="input-code" aria-describedby="input-quote" placeholder="Paste code here">
+            <input type="text" class="form-control" id="input-chars" aria-describedby="input-quote" placeholder="Paste chars here">
+          </div>
+          <button type="submit" class="btn btn-primary" id="btn-submit-chars">Submit</button>
+        </form>
       </div>
       <div class="col-sm"></div>
     </div>
-    <div class="row">
+    <div class="row" id="container-results">
       <div class="col-sm"></div>
       <div class="col-sm" id="results">
         <div id="content-results">
@@ -49,6 +63,14 @@
           <button class="btn btn-primary btn-coder" id="btn-clean">Clean</button>
         </div>
         <div id="image-display"></div>
+      </div>
+      <div class="col-sm"></div>
+    </div>
+    <div class="row" id="container-step2">
+      <div class="col-sm"></div>
+      <div class="col-sm">
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-step2">Step 2</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-step1">Step 1</button>
       </div>
       <div class="col-sm"></div>
     </div>
